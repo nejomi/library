@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Library</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="book-count"></div>
+        <header> 
+            <div class="book-logo">
+                <div class="white-rect"></div>
+            </div>
+            <div class="title-box">
+                <div class="title">libr</div>
+                <div class="title">ary!</div>
+            </div>
+        </header>
+        <main>
+            <div class="book-list">
+                <div class="book">
+                    <img src="assets/close.svg" class="book-delete">
+                    <div class="book-details">
+                        <div class="book-title">Little Prince</div>
+                        <div class="book-author">Rick Riordan</div>
+                    </div>
+                    <div>
+                        <div class="button-read">completed</div>
+                        <div class="pages">494 pages</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-status" style="display: none">scroll enabled</div>
+
+            <button class="btn btn-danger btn-lg btn-block button-add" type="button">Add Book</button>
+        </main>
+        <div class="form-bg" style="display: none">
+            <div class="add-form">
+                <img class="close" src="assets/close.svg">
+                <h4 class="mb-3">
+                Book details
+                </h4> 
+                <form>
+                <div class="form-group">
+                <label for="title">Book title</label>
+                <input type="text" class="form-control" placeholder="The Little Prince" id="title" required="">
+                <div class="invalid-feedback">
+                    Title required.
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" placeholder="Antoine de Saint-Exupéry" id="author" required="">
+                <div class="invalid-feedback">
+                    Author required.
+                </div>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="readStatus" id="finished" value="true" checked>
+                <label class="form-check-label" for="finished">
+                Finished reading
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="readStatus" id="unfinished" value="false">
+                <label class="form-check-label" for="unfinished">
+                    To read
+                </label>
+                </div>
+                <p></p>
+                <div class="form-group">
+                <label for="zip">Pages</label>
+                <input type="number" class="form-control" id="pages" placeholder="96" required="">
+                <div class="invalid-feedback">
+                    Pages required.
+                </div>
+                </div>
+                <hr>
+                <button class="btn btn-danger btn-lg btn-block add-book-button" type="button" id="#addbook">Add Book</button>
+            </form>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
