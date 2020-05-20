@@ -171,6 +171,7 @@ function loadCloses () {
             myLibrary.splice(x, 1);
             render(myLibrary);
             loadCloses();
+            loadRead();
             checkList();
             updateCount();
         }
@@ -188,6 +189,7 @@ function loadRead () {
         let func = () => {
             myLibrary[index].read = !myLibrary[index].read;
             render(myLibrary);
+            loadCloses();
             loadRead();
         }
         readArr[i].children[2].firstChild.addEventListener("click", func);
