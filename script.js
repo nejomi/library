@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
     updateCount();
     checkList();
     loadCloses();
-    loadRead ()
+    loadRead ();
     
 })
 
@@ -186,13 +186,13 @@ function loadRead () {
     
     for(i=0; i< readArr.length; i++) {
         let index = readArr[i].id.substr(-1)
-        let func = () => {
+        let funct = () => {
             myLibrary[index].read = !myLibrary[index].read;
             render(myLibrary);
             loadCloses();
             loadRead();
         }
-        readArr[i].children[2].firstChild.addEventListener("click", func);
+        readArr[i].children[2].firstChild.addEventListener("click", funct);
     }
 
 }
